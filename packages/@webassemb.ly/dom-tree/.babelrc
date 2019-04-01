@@ -1,0 +1,11 @@
+{
+  "comments": false,
+  "ignore": [
+    "./src/test"
+  ],
+  "presets": [
+    [
+      "@babel/preset-env",
+    ]
+  ]
+}

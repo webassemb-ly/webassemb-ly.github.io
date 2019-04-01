@@ -1,0 +1,6 @@
+{
+  "packages": [
+    "packages/@webassemb.ly/*"
+  ],
+  "version": "0.0.0"
+}

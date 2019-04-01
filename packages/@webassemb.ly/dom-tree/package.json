@@ -1,0 +1,29 @@
+{
+  "name": "@webassemb.ly/dom-tree",
+  "version": "0.0.0",
+  "description": "Virtual DOM library with namespace support",
+  "main": "src/index.mjs",
+  "scripts": {
+    "build": "scripts/build",
+    "test": "scripts/test"
+  },
+  "keywords": [],
+  "author": "Hans Oksendahl",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "7.2.0",
+    "@babel/core": "7.2.0",
+    "@babel/preset-env": "7.2.0",
+    "flow-bin": "0.87.0",
+    "flow-typed": "2.5.1",
+    "@webassemb.ly/utils": "0.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hansoksendahl/webassemb.ly"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "gitHead": "5f18051ca144a06eb153380d4dc6979067f71230"
+}

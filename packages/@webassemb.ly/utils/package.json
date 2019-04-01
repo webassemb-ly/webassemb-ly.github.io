@@ -1,0 +1,25 @@
+{
+  "name": "@webassemb.ly/utils",
+  "version": "0.0.0",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "tsc": "tsc",
+    "test": "karma start"
+  },
+  "keywords": [],
+  "author": "Hans Oksendahl",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@types/jasmine": "^3.3.9",
+    "jasmine": "^3.3.1",
+    "karma": "^4.0.1",
+    "karma-cli": "^2.0.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-spec-reporter": "^0.0.32",
+    "karma-typescript": "^4.0.0",
+    "typescript": "^3.3.3"
+  }
+}
