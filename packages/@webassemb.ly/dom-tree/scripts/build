@@ -1,3 +1,0 @@
-rm -rf ./lib
-mkdir ./lib
-npx babel --root-mode upward src -o ./lib/index.js

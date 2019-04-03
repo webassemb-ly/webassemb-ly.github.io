@@ -4,18 +4,21 @@
   "description": "Virtual DOM library with namespace support",
   "main": "src/index.mjs",
   "scripts": {
-    "build": "scripts/build",
-    "test": "scripts/test"
+    "build": "tsc",
+    "test": "karma start"
   },
   "keywords": [],
   "author": "Hans Oksendahl",
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "7.2.0",
-    "@babel/core": "7.2.0",
-    "@babel/preset-env": "7.2.0",
-    "flow-bin": "0.87.0",
-    "flow-typed": "2.5.1",
+    "@types/jasmine": "^3.3.9",
+    "jasmine": "^3.3.1",
+    "karma": "^4.0.1",
+    "karma-cli": "^2.0.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-spec-reporter": "^0.0.32",
+    "karma-typescript": "^4.0.0",
     "@webassemb.ly/utils": "0.0.0"
   },
   "repository": {

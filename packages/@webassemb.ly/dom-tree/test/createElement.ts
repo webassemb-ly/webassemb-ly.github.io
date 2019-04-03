@@ -1,97 +1,130 @@
 import createElement from '../src/createElement';
 
 describe('createElement', () => {
+  let ns: string | null;
+  let tag: string;
+
+  beforeAll(() => {
+    ns = 'namespace';
+    tag = 'tag';
+  })
+
   describe('parameters', () => {
     it('should take a namespace and tag', () => {
       expect(() => {
-        createElement('x', 'y');
+        createElement(ns, tag);
       }).not.toThrow();
     });
 
     it('should take a child in the form of a string', () => {
+      const child = 'child';
+
       expect(() => {
-        createElement('x', 'y', 'z');
+        createElement(ns, tag, child);
       }).not.toThrow();
     });
 
     it('should take an array of children', () => {
+      const child = ['child'];
+
       expect(() => {
-        createElement('x', 'y', ['z']);
+        createElement(ns, tag, child);
       }).not.toThrow();
     });
 
     it('should take an object of attributes', () => {
+      const attr = { key: 'value' };
+
       expect(() => {
-        createElement('x', 'y', { key: 'z' });
+        createElement(ns, tag, attr);
       }).not.toThrow();
     });
 
     it('should take an object of attributes and a string child', () => {
       expect(() => {
-        createElement('x', 'y', { key: 'z' }, 'child');
+        const attr = { key: 'value' };
+        const child = 'child';
+
+        createElement('x', 'y', attr, child);
       }).not.toThrow();
     });
 
     it('should take an object of attributes and an array of childern', () => {
       expect(() => {
-        createElement('x', 'y', { key: 'z' }, ['child']);
+        const attr = { key: 'value' };
+        const child = ['child'];
+
+        createElement('x', 'y', attr, child);
       }).not.toThrow();
     });
+  });
 
-    it('should throw')
+  describe('exceptions', () => {
+    it('should throw if no arguments are specified', () => {
+      expect(() => {
+        // @ts-ignore
+        return createElement()
+      }).toThrow();
+    });
+
+    it('should throw if parameters are out of order', () => {
+      expect(() => {
+        // @ts-ignore
+        return createElement(ns, tag, [], {})
+      }).toThrow();
+    })
   });
 
   describe('returns', () => {
     it('should define a namespace', () => {
-      const namespace = 'x';
-      const element = createElement(namespace, null);
+      const element = createElement(ns, tag);
 
-      expect(element.namespace).toBe(namespace);
+      expect(element.namespace).toBe(ns);
     });
 
     it('should define a tag', () => {
-      const tag = 'x';
-      const element = createElement(null, tag);
+      const element = createElement(ns, tag);
 
       expect(element.tag).toBe(tag);
     });
 
     it('should take a child in the form of a string', () => {
-      const child = 'x';
-      const element = createElement(null, null, child);
+      const child = 'child';
+      const element = createElement(ns, tag, child);
 
       expect(element.children[0]).toBe(child);
     });
 
     it('should take an array of children', () => {
-      const children = ['x', 'y'];
-      const element = createElement(null, null, children);
+      const children = ['child_0', 'child_1'];
+      const element = createElement(ns, tag, children);
 
-      expect(element.children).toBe(children);
+      expect(element.children).toEqual(children);
     });
 
     it('should take an object of attributes', () => {
-      const value = 'x';
-      const attributes = { key: value };
-      const element = createElement(null, null, attributes);
+      const key = 'key';
+      const value = 'value';
+      const attributes = { [key]: value };
+      const element = createElement(ns, tag, attributes);
 
       expect(element.attributes.key).toBe(value);
     });
 
     it('should take an object of attributes and a string child', () => {
-      const child = 'x';
-      const attributes = { key: null };
-      const element = createElement(null, null, attributes, child);
+      const child = 'child';
+      const attributes = { key: 'value' };
+      const element = createElement(ns, tag, attributes, child);
 
       expect(element.children[0]).toBe(child);
     });
 
     it('should take an object of attributes and an array of childern', () => {
-      const attributes = { key: null };
-      const children = ['x', 'y'];
-      const element = createElement(null, null, attributes, children);
+      const attr = { key: 'value' };
+      const children = ['child_0', 'child_1'];
+      const element = createElement(ns, tag, attr, children);
 
-      expect(element.children).toBe(children);
+      expect(element.children).toEqual(children);
     });
   });
 })
