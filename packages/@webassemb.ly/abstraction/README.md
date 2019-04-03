@@ -55,10 +55,7 @@ API
 - [createReceivers](./src/utils/createReceivers.ts)
 - [createSignalInterface](./src/utils/createSignalInterface.ts)
 
-Types
------
-
-- [types](.src/types.ts)
+- [types](./src/types.ts)
 
 TODO
 ----
