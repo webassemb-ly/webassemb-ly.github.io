@@ -50,10 +50,15 @@ API
 ---
 
 - [createEmitter](./src/utils/createEmitter.ts)
-- [createReceiver](./src/utils/createReceiver)
-- [createEmitters](./src/utils/createEmitters)
-- [createReceivers](./src/utils/createReceivers)
-- [createSignalInterface](./src/utils/createSignalInterface)
+- [createReceiver](./src/utils/createReceiver.ts)
+- [createEmitters](./src/utils/createEmitters.ts)
+- [createReceivers](./src/utils/createReceivers.ts)
+- [createSignalInterface](./src/utils/createSignalInterface.ts)
+
+Types
+-----
+
+- [types](.src/types.ts)
 
 TODO
 ----
