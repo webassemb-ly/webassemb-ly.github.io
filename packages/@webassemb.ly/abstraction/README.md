@@ -18,7 +18,7 @@ infer a unique interface at runtime.
 **Signalling for functions**
 
 ```ts
-function test(x: number, y: number): boolean {
+function test(x: number, y: number) {
   x > y;
 }
 
