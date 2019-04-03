@@ -25,7 +25,7 @@ function test(x: number, y: number) {
 const emitter = createEmitter(test);
 const receiver = createReceiver(test);
 
-const test = receiver(emitter(0, 1)) // boolean
+const result = receiver(emitter(0, 1)) // boolean
 ```
 
 **Signalling for interface instances**
