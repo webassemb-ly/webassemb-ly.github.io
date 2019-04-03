@@ -49,11 +49,11 @@ use message passing to communicate between threads.
 API
 ---
 
-createEmitter
-createReceiver
-createEmitters
-createReceivers
-createSignalInterface
+- [createEmitter](./src/utils/createEmitter.ts)
+- [createReceiver](./src/utils/createReceiver)
+- [createEmitters](./src/utils/createEmitters)
+- [createReceivers](./src/utils/createReceivers)
+- [createSignalInterface](./src/utils/createSignalInterface)
 
 TODO
 ----
